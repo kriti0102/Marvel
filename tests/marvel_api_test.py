@@ -19,7 +19,6 @@ class TestMarvelAPI(unittest.TestCase):
             }
         }).encode("utf-8")
 
-        # Ensure the mock is returned within a 'with' statement
         mock_urlopen.return_value.__enter__.return_value = mock_response
 
         result = fetch_characters_batch(0)
@@ -29,7 +28,7 @@ class TestMarvelAPI(unittest.TestCase):
     def test_fetch_characters_batch_failure(self, mock_urlopen):
         """Test error handling when API request fails."""
         result = fetch_characters_batch(0)
-        self.assertEqual(result, [])  # Should return an empty list on failure
+        self.assertEqual(result, [])
 
 if __name__ == "__main__":
     unittest.main()
