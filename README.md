@@ -37,6 +37,7 @@ project_root/
    ```
 
 4. **Set up environment variables**:
+   - Create a `.env` file in the root directory.
    - Add your Marvel API keys in `.env` file:
      ```sh
      MARVEL_PUBLIC_KEY=your_public_key
